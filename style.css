@@ -1,0 +1,246 @@
+/* Reset dasar */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 4;
+    padding: 4;
+    box-sizing: border-box;
+}
+
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s ease, box-shadow 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6a5acd;
+    background: #ece8ff;
+    transform: translateY(-3px);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: -250px;
+        width: 220px;
+        background: #fff;
+        box-shadow: -4px 0 8px rgba(0,0,0,0.1);
+        padding: 1rem;
+        transition: right 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-links.active {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* Kotak Pertemuan */
+.pertemuan {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+.pertemuan h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pertemuan p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 4rem;
+}
+
+.hero .content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero .highlight {
+    color: #b48a3d;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .image img {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Gambar */
+.image-container, .image {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.image-container img, .image img {
+    width: 45%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.image {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.image img {
+    width: 60%;
+    max-width: 700px;
+    padding: 5px;
+}
+
+/* Form */
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button {
+    background: #6a5acd;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #483d8b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* Elemen Tambahan */
+.logo a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #6d7275;
+}
+
+h3, .web {
+    margin-left: 20px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.desc {
+    margin-left: 20px;
+}
